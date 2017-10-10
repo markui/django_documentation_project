@@ -5,9 +5,13 @@ __all__ = (
     'Topping',
 )
 
+
 class Pizza(models.Model):
     name = models.CharField(max_length=30)
-    toppings = models.ManyToManyField('Topping')
+    toppings = models.ManyToManyField(
+        'Topping',
+        blank=True,
+    )
 
     def __str__(self):
         return self.name

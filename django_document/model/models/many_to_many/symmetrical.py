@@ -5,7 +5,7 @@ __all__ = (
 )
 
 
-# 이 경우는 팔로우와 달리 페이스북 친구 신청의 경우에 더 맞다. 일방적인 팔로우 경우는 표현하지 못한다/ 즉 방향성이 없는 대칭 관계이다
+# 방향성이 있는 경우
 # symmetrical=False 주기
 class InstagramUser(models.Model):
     name = models.CharField(max_length=30)

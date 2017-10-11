@@ -34,3 +34,15 @@ class User(models.Model):
         blank=True,
         null=True
     )
+
+    def __str__(self):
+        return self.name
+
+    def save(self, *args, **kwargs):
+        # 한 유저가 자기 자신의 teacher로 저장될 수 없게 하기
+        # teacher가 존재해야함
+        if self.teacher and self.teacher.pk == self.pk:
+            self.teacher = None
+            return
+        else:
+            super(User, self).save(*args, **kwargs)

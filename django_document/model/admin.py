@@ -6,7 +6,8 @@ from .models import (
     Pizza, Topping,
     FacebookUser,
     InstagramUser,
-    Idol, Group, Membership
+    Idol, Group, Membership,
+    Place, Restaurant,
 )
 
 admin.site.register(Person)
@@ -21,4 +22,5 @@ admin.site.register(InstagramUser)
 admin.site.register(Idol)
 admin.site.register(Group)
 admin.site.register(Membership)
-
+admin.site.register(Place)
+admin.site.register(Restaurant)
